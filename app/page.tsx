@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { FaFacebook } from "react-icons/fa"; // Pridať react-icons do projektu
 
 const sectionVariant = {
   hidden: { opacity: 0, y: 50 },
@@ -212,7 +213,7 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Kontakt */}
+      {/* Kontakt – email, telefón */}
       <motion.section
         className="py-10 md:py-20 flex justify-center relative z-10 px-3"
         variants={sectionVariant}
@@ -229,53 +230,32 @@ export default function Home() {
           >
             Kontakt
           </motion.h2>
-          <motion.p
-            className="mb-8 text-slate-200 text-center"
+          <motion.div
+            className="mb-8 text-slate-200 text-center text-lg space-y-2"
             initial={{ opacity: 0, y: 8 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Napíš mi na{" "}
-            <a
-              href="mailto:webappmaster@webappmaster.sk"
-              className="text-blue-200 underline hover:text-fuchsia-400 transition"
-            >
-              webappmaster@webappmaster.sk
-            </a>{" "}
-            alebo použite formulár nižšie.
-          </motion.p>
-          <motion.form
-            className="w-full max-w-lg bg-white/30 backdrop-blur-2xl border border-white/20 p-6 md:p-8 rounded-3xl shadow-2xl grid gap-5"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <input
-              className="p-3 border border-white/30 bg-white/40 backdrop-blur-xl rounded-xl text-slate-800 focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
-              type="text"
-              placeholder="Meno"
-              required
-            />
-            <input
-              className="p-3 border border-white/30 bg-white/40 backdrop-blur-xl rounded-xl text-slate-800 focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
-              type="email"
-              placeholder="E-mail"
-              required
-            />
-            <textarea
-              className="p-3 border border-white/30 bg-white/40 backdrop-blur-xl rounded-xl text-slate-800 focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
-              placeholder="Správa"
-              rows={4}
-              required
-            />
-            <Button
-              type="submit"
-              size="lg"
-              className="font-bold bg-gradient-to-r from-fuchsia-500 to-blue-500 text-white shadow-lg hover:from-blue-500 hover:to-fuchsia-500 transition-all"
-            >
-              Odoslať
-            </Button>
-          </motion.form>
+            <div>
+              <span className="font-semibold">E-mail:</span>{" "}
+              <a
+                href="mailto:webappmaster@webappmaster.sk"
+                className="text-blue-200 underline hover:text-fuchsia-400 transition"
+              >
+                webappmaster@webappmaster.sk
+              </a>
+            </div>
+            <div>
+              <span className="font-semibold">Telefón:</span>{" "}
+              <a
+                href="tel:+421950889523"
+                className="text-blue-200 underline hover:text-fuchsia-400 transition"
+              >
+                +421 950 889 523
+              </a>
+            </div>
+           
+          </motion.div>
         </div>
       </motion.section>
     </main>
