@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { FaFacebook } from "react-icons/fa"; // Pridať react-icons do projektu
+
 
 const sectionVariant = {
   hidden: { opacity: 0, y: 50 },
