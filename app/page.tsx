@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-
 const sectionVariant = {
   hidden: { opacity: 0, y: 50 },
   visible: (i = 1) => ({
@@ -254,7 +253,6 @@ export default function Home() {
                 +421 950 889 523
               </a>
             </div>
-           
           </motion.div>
         </div>
       </motion.section>
